@@ -3,172 +3,227 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog — Sahara Al-Madi</title>
-<meta name="description" content="Field notes on linguistic security, AI governance, and what technology owes the communities it learns from.">
-<link rel="icon" href="../assets/lsi-logo.png">
-<link rel="stylesheet" href="../assets/site.css">
-<style>body{margin:0;background:#f6f2e7}</style>
+<title>Sahara Al-Madi — Computational Linguist &amp; AI Governance</title>
+<meta name="description" content="Sahara Al-Madi is a computational linguist working on multilingual NLP, AI governance and linguistic security, and founder of the Linguistic Security Institute.">
+<meta property="og:title" content="Sahara Al-Madi — Computational Linguist &amp; AI Governance">
+<meta property="og:description" content="Sahara Al-Madi is a computational linguist working on multilingual NLP, AI governance and linguistic security, and founder of the Linguistic Security Institute.">
+<link rel="icon" href="assets/lsi-logo.png">
+<link rel="stylesheet" href="assets/site.css">
+<style>body{margin:0;background:#f6f2e7} .sam:not(.js) .tools .lang, .sam:not(.js) [data-panel] { display: none !important; }</style>
 </head>
 <body>
 <div class="sam" lang="en-US" dir="ltr">
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="../index.html"><img src="../assets/lsi-logo.png" alt="" width="34" height="34"><span>Sahara Al-Madi</span></a>
+    <a class="brand" href="/"><img src="assets/lsi-logo.png" alt="" width="34" height="34"><span>Sahara Al-Madi</span></a>
     <nav aria-label="Main"><ul class="nav" id="sam-nav">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../portfolio.html">Portfolio</a></li>
-      <li><a href="../speaking.html">Speaking</a></li>
-      <li><a href="../lsi.html">LSI</a></li>
-      <li><a href="index.html" aria-current="page">Blog</a></li>
-      <li><a href="mailto:linguisticsecurityinstitute@gmail.com">Contact</a></li>
+      <li><a href="/" aria-current="page" data-i18n="nav.home">Home</a></li><li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li><li><a href="speaking.html" data-i18n="nav.speaking">Speaking</a></li><li><a href="lsi.html" data-i18n="nav.lsi">LSI</a></li><li><a href="blog/index.html" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul></nav>
     <div class="tools">
-      <button type="button" class="icon-btn menu-btn" data-menu aria-expanded="false" aria-controls="sam-nav"><span>Menu</span></button>
+      <div class="lang" role="group" aria-label="Language" data-i18n-aria="lang.label"><button type="button" data-lang="en" aria-pressed="true" lang="en" title="English (US)">EN</button><button type="button" data-lang="es" aria-pressed="false" lang="es" title="Español (México)">ES</button><button type="button" data-lang="it" aria-pressed="false" lang="it" title="Italiano">IT</button><button type="button" data-lang="ar" aria-pressed="false" lang="ar" title="العربية">AR</button></div>
+      <button type="button" class="icon-btn" data-panel aria-expanded="false" aria-controls="sam-a11y">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M4 8.5l8 1.5 8-1.5M12 10v5l-3 6M12 15l3 6"/></svg>
+        <span class="lbl" data-i18n="a11y.btn">Access</span></button>
+      <button type="button" class="icon-btn menu-btn" data-menu aria-expanded="false" aria-controls="sam-nav"><span data-i18n="nav.menu">Menu</span></button>
     </div>
   </div>
 </header>
-
+<div class="a11y-panel" id="sam-a11y" role="dialog" aria-labelledby="sam-a11y-t" hidden>
+  <h2 id="sam-a11y-t" data-i18n="a11y.title">Reading & accommodation</h2>
+  <p data-i18n="a11y.hint" class="hint">Your choices are remembered on this device.</p>
+  <div class="a11y-row"><span data-i18n="a11y.size">Text size</span>
+    <div class="size-btns" role="group"><button type="button" data-size="0" aria-pressed="true" style="font-size:12px">A</button><button type="button" data-size="1" aria-pressed="false" style="font-size:14px">A</button><button type="button" data-size="2" aria-pressed="false" style="font-size:16px">A</button><button type="button" data-size="3" aria-pressed="false" style="font-size:18px">A</button></div></div>
+  <div class="a11y-row"><span id="lbl-text" data-i18n="a11y.text">Text-only mode</span>
+      <button type="button" class="switch" role="switch" aria-checked="false" data-mode="text" aria-labelledby="lbl-text"></button></div><div class="a11y-row"><span id="lbl-readable" data-i18n="a11y.readable">Readable font (dyslexia-friendly)</span>
+      <button type="button" class="switch" role="switch" aria-checked="false" data-mode="readable" aria-labelledby="lbl-readable"></button></div><div class="a11y-row"><span id="lbl-contrast" data-i18n="a11y.contrast">High contrast</span>
+      <button type="button" class="switch" role="switch" aria-checked="false" data-mode="contrast" aria-labelledby="lbl-contrast"></button></div><div class="a11y-row"><span id="lbl-dark" data-i18n="a11y.dark">Night-sky theme</span>
+      <button type="button" class="switch" role="switch" aria-checked="false" data-mode="dark" aria-labelledby="lbl-dark"></button></div><div class="a11y-row"><span id="lbl-calm" data-i18n="a11y.calm">Reduce motion</span>
+      <button type="button" class="switch" role="switch" aria-checked="false" data-mode="calm" aria-labelledby="lbl-calm"></button></div>
+  <button type="button" class="reset" data-reset data-i18n="a11y.reset">Reset all</button>
+  <button type="button" class="reset" data-panel data-i18n="a11y.close" style="margin-top:6px">Close</button>
+</div>
 <main id="main">
-<section class="page-hero" style="background:var(--forest-800);color:var(--cream);padding:clamp(64px,10vw,120px) 0 clamp(48px,7vw,90px)">
-  <div class="wrap">
-    <p class="eyebrow" style="color:var(--gold-soft);font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px">Writing</p>
-    <h1 style="font-size:clamp(2.2rem,6vw,4rem);font-weight:400;margin-bottom:16px">Field notes & interviews</h1>
-    <p style="max-width:52ch;color:rgba(246,242,231,.88);font-size:1.1rem">On linguistic security, AI governance, and what technology owes the communities it learns from.</p>
-    <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:12px">
-      <a class="btn btn-gold" href="https://substack.com/@linguisticsecurityinstitute" target="_blank" rel="noopener">Read on Substack →</a>
+<div class="text-only-note wrap" data-i18n="textonly.note">Text-only mode is on: images and decoration are hidden. Turn it off from the Access menu.</div>
+<section class="hero hero-photo">
+  <img class="hero-bg deco" src="assets/hero-coast.jpg" alt="" width="1024" height="408">
+  <div class="wrap hero-grid"><div>
+    <p data-i18n="home.eyebrow" class="eyebrow">Hello, I'm</p>
+    <h1>Sahara Al-Madi</h1>
+    <p data-i18n=”home.roles” class=”roles”>Computational linguist · AI security and governance · Founder, Linguistic Security Institute</p>
+    <p data-i18n=”home.quote” class=”quote”>”What do AI systems owe the communities whose languages they process?”</p>
+    <p data-i18n=”home.lede” class=”lede”>A linguist building systems that are secure, accountable, and educational for the communities they serve. Founder of the Linguistic Security Institute — an open-source research initiative built on one principle: AI systems must be accountable to the communities whose languages they process.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="speaking.html#inquire" data-i18n="home.cta1">Let’s work together</a>
+      <a class="btn btn-ghost" href="portfolio.html" data-i18n="home.cta2">View portfolio →</a>
+      <a class="btn btn-ghost" href="lsi.html" data-i18n="home.cta3">Explore LSI</a>
     </div>
+    <div class="stat-line"><span data-i18n="hero.s1">Published at ACL 2026</span><span data-i18n="hero.s2">7 talks & workshops in 2026</span><span data-i18n="hero.s3">Open-source tools & live demos</span></div>
   </div>
+  <div class="portrait-wrap"><div class="portrait"><img src="assets/sahara-portrait.jpg" width="725" height="796" alt="Sahara Al-Madi sitting on sunlit coastal rocks at golden hour" data-i18n-alt="portrait.alt"></div></div>
+  </div>
+  <svg class="landscape deco" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false" style="height:clamp(60px,8vw,110px)">
+  <path d="M0 60 C200 30 380 90 600 62 S1000 30 1200 58 1380 70 1440 56 V120 H0Z" fill="#1a8a99" opacity=".55"/>
+  <path d="M0 82 C220 62 420 104 640 84 S1040 60 1240 82 1400 92 1440 86 V120 H0Z" fill="#0f5c70" opacity=".8"/>
+  <path class="near" d="M0 100 C240 88 460 114 700 102 S1100 88 1300 102 1420 108 1440 106 V120 H0Z" fill="var(--bg)"/>
+</svg>
 </section>
 
 <section class="block"><div class="wrap">
-  <p class="kicker">On Substack</p>
-  <h2 class="sec-title">Subscribe for research updates</h2>
-  <p class="sec-intro">Long-form writing, interviews and community resources published on Substack. Subscribe there to get new posts by email.</p>
-  <a class="btn btn-line" href="https://substack.com/@linguisticsecurityinstitute" target="_blank" rel="noopener" style="display:inline-flex">Go to Substack →</a>
+  <p class="kicker" data-i18n="focus.kicker">Areas of work</p><h2 class="sec-title" data-i18n="focus.title">A linguist building systems that are secure, accountable, and educational for the communities they serve.</h2><p class="sec-intro" data-i18n="focus.intro">My work asks not only whether a system works, but for whom it works, whom it fails, and who gets to decide — across computational linguistics, cybersecurity, AI governance, conservation and space policy.</p>
+  <div class="grid g3"><article class="card"><span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/><path d="M8.5 10h7M8.5 13.5h5"/></svg></span><h3 data-i18n="f1.t">Linguistic security</h3><p data-i18n="f1.d">How language itself becomes an attack surface: polyglot prompt injection, code-switching (Spanglish, Arabizi) and dialect gaps in AI guardrails.</p></article><article class="card"><span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 20h12M5 8h14"/><path d="M5 8l-3 6a3 3 0 006 0L5 8zM19 8l-3 6a3 3 0 006 0l-3-6z"/></svg></span><h3 data-i18n="f2.t">AI governance</h3><p data-i18n="f2.d">Risk assessment frameworks and accountability protocols for language integrity across the AI lifecycle.</p></article><article class="card"><span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15z"/><path d="M5 19c3-4 6-7 10-9"/></svg></span><h3 data-i18n="f3.t">Indigenous data sovereignty</h3><p data-i18n="f3.d">Community consent and control over data about their languages, lands and knowledge — from archives to Earth observation.</p></article><article class="card"><span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><h3 data-i18n="f4.t">Multilingual NLP & evaluation</h3><p data-i18n="f4.d">LLM evaluation, error analysis and golden-label quality for Arabic, Spanish and dialectal variation.</p></article><article class="card"><span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h2M6 8v8M10 5v14M14 8v8M18 10v4M22 12h-2"/></svg></span><h3 data-i18n="f5.t">Language revitalization</h3><p data-i18n="f5.d">Tools for low-resource and endangered languages, like Mitote, a Nahuatl-aware text-to-speech prototype.</p></article><article class="card"><span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(-25 12 12)"/></svg></span><h3 data-i18n="f6.t">Earth observation & space</h3><p data-i18n="f6.d">Data ethics for geoscience and conservation, and long-horizon thinking for responsible space-debris prioritization.</p></article></div>
 </div></section>
 
-<section class="block alt"><div class="wrap">
-  <p class="kicker">Posts on this site</p>
-  <h2 class="sec-title">Articles & resources</h2>
-  <p class="sec-intro" style="margin-bottom:32px">Posts published directly here — articles, resources and interview transcripts for the LSI community.</p>
-
-  <!-- ============================================================
-       HOW TO ADD A BLOG POST:
-       1. Create a new file in this blog/ folder, e.g. my-post.html
-          (copy the template at the bottom of this file as a starting point)
-       2. Add a new <article> block below, following the pattern shown
-       3. Commit both files to GitHub — the post goes live automatically
-       ============================================================ -->
-
-  <div style="display:grid;gap:24px;max-width:760px">
-
-    <!-- EXAMPLE — remove this block when you have real posts -->
-    <article class="card" style="opacity:.55;pointer-events:none;user-select:none">
-      <div class="tag">Coming soon</div>
-      <h3>Your first post goes here</h3>
-      <p>Add a new .html file to the blog/ folder and a card here linking to it. See the comment in the source for instructions.</p>
-      <span class="more" style="color:var(--text-soft)">Read more →</span>
-    </article>
-
-  </div>
+<section class="block alt" id="work"><div class="wrap">
+  <p class="kicker" data-i18n="collab.kicker">Collaborations</p><h2 class="sec-title" data-i18n="collab.title">Talks, research and community</h2>
+  <div class="grid g4"><a class="card" href="speaking.html"><div data-i18n="c1.tag" class="tag">Keynotes · workshops</div><h3 data-i18n="c1.t">Speaking & workshops</h3><p data-i18n="c1.d">Conference talks and hands-on red-teaming workshops on linguistic attacks in AI, data sovereignty and language technology.</p><span data-i18n="c1.m" class="more">Invite me to speak →</span></a><a class="card" href="portfolio.html#research"><div data-i18n="c2.tag" class="tag">Shared tasks · papers</div><h3 data-i18n="c2.t">Research collaboration</h3><p data-i18n="c2.d">Arabic NLP, multilingual benchmarking, bias auditing and error analysis across large language models.</p><span data-i18n="c2.m" class="more">See research →</span></a><a class="card" href="portfolio.html#experience"><div data-i18n="c3.tag" class="tag">Data · QA · evaluation</div><h3 data-i18n="c3.t">Multilingual AI evaluation</h3><p data-i18n="c3.d">Golden-label sets, QA frameworks and annotation guidelines for multilingual LLMs and voice AI.</p><span data-i18n="c3.m" class="more">See experience →</span></a><a class="card" href="lsi.html"><div data-i18n="c4.tag" class="tag">Open source</div><h3 data-i18n="c4.t">The LSI community</h3><p data-i18n="c4.d">LSI builds the frameworks, tools and conversations that hold AI accountable to the communities whose languages it processes.</p><span data-i18n="c4.m" class="more">Join LSI →</span></a></div>
+  <div class="contact-strip"><span><span data-i18n="contact.lead">Tell me about your project:</span> <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSfYIryQNWFWlKuIRPGL1lqg7giIMWGLlpkgukA0AJf5lLCF3Q/viewform?usp=header" target="_blank" rel="noopener" style="margin-left:8px">Start an inquiry →</a> <a href="mailto:linguisticsecurityinstitute@gmail.com" style="font-size:.9rem">or email us</a></span>
+    <span><a href="https://www.linkedin.com/in/madisahara" rel="noopener">LinkedIn</a> · <a href="https://github.com/bintdamiana" rel="noopener">GitHub</a></span></div>
 </div></section>
 
 <section class="block"><div class="wrap">
-  <p class="kicker">Media</p>
-  <h2 class="sec-title">More from LSI</h2>
+  <p class="kicker" data-i18n="up.kicker">On the horizon</p><h2 class="sec-title" data-i18n="up.title">Upcoming engagements</h2>
+  <div class="events" data-upcoming="4"><article class="event is-past" hidden>
+  <div class="date" data-date="2026-01-24"><span class="d">24</span><span class="m">Jan 2026</span></div>
+  <div>
+    <div class="where"><strong class="ltr">Tech Intersections</strong> · <span class="ltr">Northeastern University, Oakland</span></div>
+    <h3 class="ltr">“Bridging the Cybersecurity Gap for Multilingual and Marginalized Communities”</h3>
+    <p data-i18n="ev.tech">On the intersection of language, security and equity.</p>
+  </div>
+  <span class="badge past" data-fmt="fmt.inperson">Past</span>
+</article><article class="event is-past" hidden>
+  <div class="date" data-date="2026-03-16"><span class="d">16</span><span class="m">Mar 2026</span></div>
+  <div>
+    <div class="where"><strong class="ltr">GEO Indigenous Summit</strong> · <span class="ltr">Group on Earth Observations</span></div>
+    <h3 class="ltr">“Who Speaks for the Data? A Linguist’s Lens on Listening to Land and Language”</h3>
+    <p data-i18n="ev.geo">Parallels between human-language AI and non-human data ethics for space and conservation communities.</p>
+  </div>
+  <span class="badge past" data-fmt="fmt.virtual">Past</span>
+</article><article class="event is-past" hidden>
+  <div class="date" data-date="2026-04-04"><span class="d">4</span><span class="m">Apr 2026</span></div>
+  <div>
+    <div class="where"><strong class="ltr">BSides San Diego</strong> · <span class="ltr">San Diego State University</span></div>
+    <h3 class="ltr">“Polyglot Poisoning: Bypassing AI Guardrails via the Linguistic Supply Chain”</h3>
+    <p data-i18n="ev.bsides">Featured the Linguistic Firewall demo, examining vulnerabilities and defensive frameworks.</p>
+  </div>
+  <span class="badge past" data-fmt="fmt.inperson">Past</span>
+</article><article class="event">
+  <div class="date" data-date="2026-10-09"><span class="d">9</span><span class="m">Oct 2026</span></div>
+  <div>
+    <div class="where"><strong class="ltr">Yohaku Space Global Showcase</strong> · <span class="ltr">Space Debris Hackathon</span></div>
+    <h3 class="ltr">“Seven Generations in Orbit: A Framework for Responsible Debris Prioritization”</h3>
+    <p data-i18n="ev.yohaku">Hackathon contribution solving Challenge 2, presented via public showcase video.</p>
+  </div>
+  <span class="badge" data-fmt="fmt.virtual">Virtual</span>
+</article><article class="event">
+  <div class="date" data-date="2026-10-11"><span class="d">11</span><span class="m">Oct 2026</span></div>
+  <div>
+    <div class="where"><strong class="ltr">Geological Society of America — GSA Connects 2026</strong> · <span class="ltr">Colorado Convention Center, Denver</span></div>
+    <h3 class="ltr">“Indigenous Data Sovereignty in AI-Driven Earth Observation: A Framework for Equitable Geoscience and Education”</h3>
+    <p data-i18n="ev.gsa">A proposed framework for Indigenous data sovereignty in geoscience and education.</p>
+  </div>
+  <span class="badge" data-fmt="fmt.inperson">In person</span>
+</article><article class="event">
+  <div class="date" data-date="2026-10-16"><span class="d">16</span><span class="m">Oct 2026</span></div>
+  <div>
+    <div class="where"><strong class="ltr">Technology for Second Language Learning Conference</strong> · <span class="ltr">Iowa State University</span></div>
+    <h3 class="ltr">“To Listen is to Inherit: From Grandmothers to Generative Models”</h3>
+    <p data-i18n="ev.tsll">How human traditions of listening and carrying memory can inform what we build.</p>
+  </div>
+  <span class="badge" data-fmt="fmt.virtual">Virtual</span>
+</article><article class="event">
+  <div class="date" data-date="2026-11-14"><span class="d">14</span><span class="m">Nov 2026</span></div>
+  <div>
+    <div class="where"><strong class="ltr">DEATHCon / BSides San Diego</strong> · <span class="ltr">University of San Diego</span></div>
+    <h3 class="ltr"><a href="https://deathcon.io/workshops.html" rel="noopener" target="_blank">“Polyglot Poisoning: Hands-On Hunting for Linguistic Attacks in AI”</a></h3>
+    <p data-i18n="ev.death">Pre-recorded virtual workshop plus a Saturday in-person, hands-on session.</p>
+  </div>
+  <span class="badge" data-fmt="fmt.hybrid">Virtual & in person</span>
+</article></div>
+  <p style="margin-top:20px"><a class="btn btn-line" href="portfolio.html#speaking" data-i18n="up.all">All engagements →</a></p>
+</div></section>
+
+<section class="block" id="demos"><div class="wrap">
+  <p class="kicker" data-i18n="demo.kicker">Demos</p><h2 class="sec-title" data-i18n="demo.title">Featured demos</h2><p class="sec-intro" data-i18n="demo.intro">Working prototypes from the Linguistic Security Institute, open on GitHub.</p>
+  <div class="demos">
+<article class="demo">
+  <div class="band fw"><svg viewBox="0 0 120 120" fill="none" aria-hidden="true"><path d="M60 14l38 14v28c0 22-16 40-38 46-22-6-38-24-38-46V28l38-14z" stroke="#f0d9b0" stroke-width="2.5"/><text x="60" y="58" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#fff">A ع</text><text x="60" y="80" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#c4e6ec">ñ · 3a</text></svg><div data-i18n="d1.tag" class="tag">AI security · BSides San Diego 2026</div><h3 class="ltr">Linguistic Firewall: Polyglot Poisoning</h3></div>
+  <div class="body"><p data-i18n="d1.d">A prototype that probes LLM guardrails for “polyglot poisoning”: using dialects, scripts and code-switching to slip past safety filters tuned mostly for English.</p><ul class="points"><li data-i18n="d1.p1">Web interface and API on Python 3.9+</li><li data-i18n="d1.p2">Runs against local Ollama-compatible models</li><li data-i18n="d1.p3">Basis for the DEATHCon 2026 hands-on workshop</li></ul><p data-i18n="d1.note" class="note">Responsible disclosure: full attack prompts are shared only with verified researchers working on defenses.</p>
+    <div class="btns"><a class="btn btn-sm btn-solid" href="https://github.com/LinguisticSecurityInstitute/linguistic-firewall" rel="noopener" target="_blank" data-i18n="btn.code">Code on GitHub ↗</a>
+    <a class="btn btn-sm btn-solid" href="https://docs.google.com/forms/d/e/1FAIpQLSfYIryQNWFWlKuIRPGL1lqg7giIMWGLlpkgukA0AJf5lLCF3Q/viewform?usp=header" target="_blank" rel="noopener" data-i18n="btn.access">Request researcher access</a>
+    <a class="btn btn-sm btn-line" href="mailto:linguisticsecurityinstitute@gmail.com?subject=Linguistic%20Firewall%20researcher%20access">Email instead</a></div></div>
+</article>
+<article class="demo">
+  <div class="band orbit"><svg viewBox="0 0 120 120" fill="none" aria-hidden="true"><circle cx="60" cy="60" r="16" fill="#1a8a99" opacity=".9"/><ellipse cx="60" cy="60" rx="52" ry="20" stroke="#f0d9b0" stroke-dasharray="3 5" transform="rotate(-20 60 60)"/><ellipse cx="60" cy="60" rx="38" ry="12" stroke="#c4e6ec" opacity=".6" transform="rotate(25 60 60)"/><circle cx="108" cy="44" r="3.5" fill="#d9a865"/><circle cx="24" cy="80" r="2.5" fill="#c4e6ec"/><circle cx="82" cy="72" r="2" fill="#fff"/></svg><div data-i18n="d2.tag" class="tag">YOHAKU Space Debris Hackathon · Challenge 2</div><h3 class="ltr">Seven Generations in Orbit</h3></div>
+  <div class="body"><p data-i18n="d2.d">A decision tool for choosing which space-debris objects to take responsibility for first, built on seven questions grounded in the Lakota principles shared through the challenge.</p><ul class="points"><li data-i18n="d2.p1">Six real debris objects, each with its web of relationships</li><li data-i18n="d2.p2">Compares today’s ranking with one seven generations ahead</li><li data-i18n="d2.p3">Refuses to rank until standing to decide is established</li></ul>
+    <div class="btns"><a class="btn btn-sm btn-solid" href="https://almadilsitask2yohaku.kimi.page/" rel="noopener" target="_blank" data-i18n="btn.live">Live demo ↗</a>
+    <a class="btn btn-sm btn-line" href="https://github.com/LinguisticSecurityInstitute/YOHAKU2026" rel="noopener" target="_blank" data-i18n="btn.code">Code on GitHub ↗</a></div></div>
+</article>
+</div>
+</div></section>
+
+<section class="block" id="media"><div class="wrap">
+  <p class="kicker">Community & media</p>
+  <h2 class="sec-title">Where the work shows up</h2>
+  <p class="sec-intro">LSI publishes across three channels — video, writing, and open models — each aimed at making linguistic security research accessible and actionable for the communities it serves.</p>
   <div class="grid g3">
+
     <a class="card" href="https://www.youtube.com/@TheCyberLingo" target="_blank" rel="noopener">
-      <div class="tag">YouTube</div>
+      <span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 2l-4 5-4-5"/><polygon points="10 11 16 14.5 10 18 10 11"/></svg></span>
+      <div class="tag">YouTube · video series</div>
       <h3>The Cyber Lingo</h3>
-      <p>Interviews, demos and workshops — AI security made visible for the whole community.</p>
-      <span class="more">Watch →</span>
+      <p>Interviews, live workshops, red-team demos and visual explainers — making AI security and linguistic rights legible for everyone, not just practitioners.</p>
+      <span class="more">Watch on YouTube →</span>
     </a>
+
+    <a class="card" href="blog/index.html">
+      <span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
+      <div class="tag">Writing · Substack · resources</div>
+      <h3>Field notes & interviews</h3>
+      <p>Written interviews, research articles and community resources on linguistic security, AI governance and language rights — published here and on Substack.</p>
+      <span class="more">Read the blog →</span>
+    </a>
+
     <a class="card" href="https://huggingface.co/madisahara" target="_blank" rel="noopener">
-      <div class="tag">Hugging Face</div>
+      <span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></span>
+      <div class="tag">Hugging Face · open models & datasets</div>
       <h3>Open models & datasets</h3>
-      <p>Multilingual NLP benchmarks and evaluation tools — free to use and build on.</p>
-      <span class="more">Explore →</span>
+      <p>LSI's open-source models, datasets and evaluation benchmarks for multilingual NLP — Arabic, Spanish and low-resource language research, free to use and build on.</p>
+      <span class="more">Explore on Hugging Face →</span>
     </a>
-    <a class="card" href="../lsi.html">
-      <div class="tag">Research</div>
-      <h3>Linguistic Security Institute</h3>
-      <p>The frameworks, tools and open-source projects behind the work.</p>
-      <span class="more">Explore LSI →</span>
-    </a>
+
+  </div>
+</div></section>
+
+<section class="block alt"><div class="wrap grid g2" style="align-items:start;gap:48px">
+  <div><p class="kicker" data-i18n="path.kicker">Path</p><h2 class="sec-title" data-i18n="path.title">A path through language and technology</h2><ol class="path"><li><span class="when ltr">B.A.</span><strong data-i18n="p1.t">UCLA · B.A. Applied Linguistics</strong><span data-i18n="p1.d" class="desc">Phonetics, phonology, syntax, pragmatics and dialectology.</span></li><li><span class="when ltr">2020 – 2025</span><strong data-i18n="p2.t">National Museum of Language · Digital Strategy Lead</strong><span data-i18n="p2.d" class="desc">Multilingual digital strategy (+62% organic traffic), grants, and translation and interpretation projects in English, Spanish and Arabic.</span></li><li><span class="when ltr">2024 – 2026</span><strong data-i18n="p3.t">SoundHound AI · AI Data Operations Consultant</strong><span data-i18n="p3.d" class="desc">Led data operations and QA for a multilingual conversational AI project.</span></li><li><span class="when ltr">2025</span><strong data-i18n="p4.t">Founded the Linguistic Security Institute</strong><span data-i18n="p4.d" class="desc">An open-source research initiative for culturally coherent, trustworthy AI.</span></li><li><span class="when ltr">2026</span><strong data-i18n="p5.t">Google (via TEKsystems) · AI Golden Label Rater</strong><span data-i18n="p5.d" class="desc">Multilingual data operations, localization and LLM evaluation.</span></li><li><span class="when ltr">2027</span><strong data-i18n="p6.t">Georgia Tech · M.S. Computer Science</strong><span data-i18n="p6.d" class="desc">Prospective, Spring 2027.</span></li></ol></div>
+  <div>
+    <h2 class="sec-title" data-i18n="more.title">More</h2>
+    <dl class="facts">
+      <dt data-i18n="more.lang">Languages</dt><dd data-i18n="more.langv">English (native) · Spanish (native) · Arabic (reading, writing, linguistic analysis) · Italian (intermediate)</dd>
+      <dt data-i18n="more.email">Email</dt><dd><a href="mailto:linguisticsecurityinstitute@gmail.com">linguisticsecurityinstitute@gmail.com</a></dd>
+      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/madisahara" rel="noopener">linkedin.com/in/madisahara</a></dd>
+      <dt>GitHub</dt><dd><a href="https://github.com/bintdamiana" rel="noopener">github.com/bintdamiana</a></dd>
+      <dt>Hugging Face</dt><dd><a href="https://huggingface.co/madisahara" rel="noopener" target="_blank">huggingface.co/madisahara</a></dd>
+      <dt>YouTube</dt><dd><a href="https://www.youtube.com/@TheCyberLingo" rel="noopener" target="_blank">The Cyber Lingo</a></dd>
+      <dt>LSI</dt><dd><a href="lsi.html">Linguistic Security Institute</a></dd>
+      <dt data-i18n="more.cv">CV</dt><dd><a href="assets/Sahara-Al-Madi-CV-2026.pdf" data-i18n="more.cvl">Download my CV (PDF)</a></dd>
+    </dl>
+    <div class="card" style="margin-top:32px">
+      <p data-i18n="blog.kicker" class="kicker">Writing</p><h3 data-i18n="blog.title">Notes from the field</h3><p data-i18n="blog.text">I write about linguistic security, AI governance, and what technology owes the voices it learns from. Subscribe for occasional research updates and invitations to dialogue.</p>
+      <a class="btn btn-line" href="blog/index.html" data-i18n="blog.btn" style="align-self:flex-start">Read the blog →</a>
+    </div>
   </div>
 </div></section>
 </main>
-
 <footer class="foot"><div class="wrap">
-  <div>© <span data-year>2026</span> Sahara Al-Madi · All rights reserved.</div>
-  <div>
-    <a href="mailto:linguisticsecurityinstitute@gmail.com">linguisticsecurityinstitute@gmail.com</a>
-    <a href="https://www.linkedin.com/in/madisahara" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/bintdamiana" rel="noopener">GitHub</a>
-    <a href="https://www.youtube.com/@TheCyberLingo" rel="noopener" target="_blank">YouTube</a>
-    <a href="https://huggingface.co/madisahara" rel="noopener" target="_blank">Hugging Face</a>
-    <a href="../speaking.html">Speaking</a>
-    <a href="../lsi.html">LSI</a>
-  </div>
-  <div class="place">Land · Language · Orbit</div>
+  <div>© <span data-year>2026</span> Sahara Al-Madi · <span data-i18n="foot.rights">All rights reserved.</span></div>
+  <div><a href="mailto:linguisticsecurityinstitute@gmail.com">linguisticsecurityinstitute@gmail.com</a><a href="https://www.linkedin.com/in/madisahara" rel="noopener">LinkedIn</a><a href="https://github.com/bintdamiana" rel="noopener">GitHub</a><a href="https://www.youtube.com/@TheCyberLingo" rel="noopener" target="_blank">YouTube</a><a href="https://huggingface.co/madisahara" rel="noopener" target="_blank">Hugging Face</a><a href="speaking.html" data-i18n="nav.speaking">Speaking</a><a href="lsi.html">LSI</a></div>
+  <div class="place" data-i18n="foot.place">Land · Language · Orbit</div>
 </div></footer>
 </div>
-<script src="../assets/site.js"></script>
+<script>document.querySelectorAll('.sam').forEach(function(r){r.classList.add('js')});</script>
+<script src="assets/site.js"></script>
 </body>
 </html>
-
-<!--
-==============================================================
-BLOG POST TEMPLATE — copy this into a new file, e.g. blog/my-post-title.html
-Then add a card linking to it in the section above.
-==============================================================
-
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>YOUR POST TITLE — Sahara Al-Madi</title>
-<link rel="icon" href="../assets/lsi-logo.png">
-<link rel="stylesheet" href="../assets/site.css">
-<style>body{margin:0;background:#f6f2e7}</style>
-</head>
-<body>
-<div class="sam" lang="en-US" dir="ltr">
-<header class="topbar">
-  <div class="wrap">
-    <a class="brand" href="../index.html"><img src="../assets/lsi-logo.png" alt="" width="34" height="34"><span>Sahara Al-Madi</span></a>
-    <nav aria-label="Main"><ul class="nav" id="sam-nav">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="index.html" aria-current="page">Blog</a></li>
-      <li><a href="../lsi.html">LSI</a></li>
-      <li><a href="mailto:linguisticsecurityinstitute@gmail.com">Contact</a></li>
-    </ul></nav>
-    <div class="tools">
-      <button type="button" class="icon-btn menu-btn" data-menu aria-expanded="false" aria-controls="sam-nav"><span>Menu</span></button>
-    </div>
-  </div>
-</header>
-<main id="main">
-<article style="max-width:720px;margin:0 auto;padding:clamp(48px,8vw,96px) 24px">
-  <p class="kicker">CATEGORY (e.g. Linguistic security)</p>
-  <h1 style="font-size:clamp(1.8rem,4vw,3rem);font-weight:400;margin-bottom:12px">YOUR POST TITLE</h1>
-  <p style="color:var(--text-soft);margin-bottom:48px">MONTH DAY, YEAR · 5 min read</p>
-
-  <p>Your post content goes here. Use regular HTML paragraphs, headings, and lists.</p>
-
-  <h2>A subheading</h2>
-  <p>More content...</p>
-
-</article>
-</main>
-<footer class="foot"><div class="wrap">
-  <div>© 2026 Sahara Al-Madi</div>
-  <div><a href="../index.html">Home</a><a href="index.html">Blog</a><a href="../lsi.html">LSI</a></div>
-</div></footer>
-</div>
-<script src="../assets/site.js"></script>
-</body>
-</html>
--->
