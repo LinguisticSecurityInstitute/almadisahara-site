@@ -7,27 +7,41 @@
 <meta name="description" content="Field notes on linguistic security, AI governance, and what technology owes the communities it learns from.">
 <link rel="icon" href="../assets/lsi-logo.png">
 <link rel="stylesheet" href="../assets/site.css">
-<style>body{margin:0;background:#f6f2e7}</style>
+<style>body{margin:0;background:#f6f2e7} .sam:not(.js) .tools .lang, .sam:not(.js) [data-panel] { display: none !important; }</style>
 </head>
 <body>
 <div class="sam" lang="en-US" dir="ltr">
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="/"><img src="../assets/lsi-logo.png" alt="" width="34" height="34"><span>Sahara Al-Madi</span></a>
     <nav aria-label="Main"><ul class="nav" id="sam-nav">
-      <li><a href="/">Home</a></li>
-      <li><a href="../portfolio.html">Portfolio</a></li>
-      <li><a href="../speaking.html">Speaking</a></li>
-      <li><a href="../lsi.html">LSI</a></li>
-      <li><a href="index.html" aria-current="page">Blog</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="/" data-i18n="nav.home">Home</a></li><li><a href="../portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li><li><a href="../speaking.html" data-i18n="nav.speaking">Speaking</a></li><li><a href="../lsi.html" data-i18n="nav.lsi">LSI</a></li><li><a href="index.html" aria-current="page" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul></nav>
     <div class="tools">
-      <button type="button" class="icon-btn menu-btn" data-menu aria-expanded="false" aria-controls="sam-nav"><span>Menu</span></button>
+      <div class="lang" role="group" aria-label="Language" data-i18n-aria="lang.label"><button type="button" data-lang="en" aria-pressed="true" lang="en" title="English (US)">EN</button><button type="button" data-lang="es" aria-pressed="false" lang="es" title="Español (México)">ES</button><button type="button" data-lang="it" aria-pressed="false" lang="it" title="Italiano">IT</button><button type="button" data-lang="ar" aria-pressed="false" lang="ar" title="العربية">AR</button></div>
+      <button type="button" class="icon-btn" data-panel aria-expanded="false" aria-controls="sam-a11y">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M4 8.5l8 1.5 8-1.5M12 10v5l-3 6M12 15l3 6"/></svg>
+        <span class="lbl" data-i18n="a11y.btn">Access</span></button>
+      <button type="button" class="icon-btn menu-btn" data-menu aria-expanded="false" aria-controls="sam-nav"><span data-i18n="nav.menu">Menu</span></button>
     </div>
   </div>
 </header>
+<div class="a11y-panel" id="sam-a11y" role="dialog" aria-labelledby="sam-a11y-t" hidden>
+  <h2 id="sam-a11y-t" data-i18n="a11y.title">Reading & accommodation</h2>
+  <p data-i18n="a11y.hint" class="hint">Your choices are remembered on this device.</p>
+  <div class="a11y-row"><span data-i18n="a11y.size">Text size</span>
+    <div class="size-btns" role="group"><button type="button" data-size="0" aria-pressed="true" style="font-size:12px">A</button><button type="button" data-size="1" aria-pressed="false" style="font-size:14px">A</button><button type="button" data-size="2" aria-pressed="false" style="font-size:16px">A</button><button type="button" data-size="3" aria-pressed="false" style="font-size:18px">A</button></div></div>
+  <div class="a11y-row"><span id="lbl-text" data-i18n="a11y.text">Text-only mode</span>
+      <button type="button" class="switch" role="switch" aria-checked="false" data-mode="text" aria-labelledby="lbl-text"></button></div><div class="a11y-row"><span id="lbl-readable" data-i18n="a11y.readable">Readable font (dyslexia-friendly)</span>
+      <button type="button" class="switch" role="switch" aria-checked="false" data-mode="readable" aria-labelledby="lbl-readable"></button></div><div class="a11y-row"><span id="lbl-contrast" data-i18n="a11y.contrast">High contrast</span>
+      <button type="button" class="switch" role="switch" aria-checked="false" data-mode="contrast" aria-labelledby="lbl-contrast"></button></div><div class="a11y-row"><span id="lbl-dark" data-i18n="a11y.dark">Night-sky theme</span>
+      <button type="button" class="switch" role="switch" aria-checked="false" data-mode="dark" aria-labelledby="lbl-dark"></button></div><div class="a11y-row"><span id="lbl-calm" data-i18n="a11y.calm">Reduce motion</span>
+      <button type="button" class="switch" role="switch" aria-checked="false" data-mode="calm" aria-labelledby="lbl-calm"></button></div>
+  <button type="button" class="reset" data-reset data-i18n="a11y.reset">Reset all</button>
+  <button type="button" class="reset" data-panel data-i18n="a11y.close" style="margin-top:6px">Close</button>
+</div>
 
 <main id="main">
 <section class="page-hero" style="background:var(--forest-800);color:var(--cream);padding:clamp(64px,10vw,120px) 0 clamp(48px,7vw,90px)">
