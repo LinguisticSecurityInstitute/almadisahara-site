@@ -1,0 +1,4 @@
+Create a blog/ folder, then upload inside it:
+
+Go to repo → Add file → Create new file → type blog/placeholder.txt, put anything, commit
+Then go into blog/ → Add file → Upload files → upload blog/index.html
