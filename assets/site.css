@@ -162,8 +162,8 @@
 .sam .demos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
 .sam .demo { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; }
 .sam .demo .band { position: relative; min-height: 150px; padding: 22px 24px; color: #fff; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
-.sam .demo .band.fw { background: radial-gradient(500px 200px at 90% 0%, rgba(121, 176, 93, .45), transparent 60%), linear-gradient(135deg, var(--forest-900), var(--forest-700) 60%, var(--ocean-700)); }
-.sam .demo .band.orbit { background: radial-gradient(420px 220px at 85% 20%, rgba(26, 138, 153, .55), transparent 60%), linear-gradient(160deg, var(--space), var(--ocean-900) 70%, var(--forest-800)); }
+.sam .demo .band.fw { background: linear-gradient(135deg, #0d2a21 0%, #1a4a35 60%, #0f5c70 100%); }
+.sam .demo .band.orbit { background: linear-gradient(160deg, #070d1a 0%, #0b2333 60%, #0d2a21 100%); }
 .sam .demo .band svg { position: absolute; inset-inline-end: 18px; top: 16px; width: 120px; height: 120px; opacity: .9; }
 .sam .demo .band .tag { font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--gold-soft); margin-bottom: 6px; }
 .sam .demo .band h3 { font-size: 1.45rem; margin: 0; max-width: 18ch; }
