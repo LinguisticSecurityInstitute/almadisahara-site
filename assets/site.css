@@ -3,7 +3,7 @@
    Everything is scoped under .sam so it can live inside a
    WordPress page without fighting the theme's own CSS.
    ========================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Mulish:wght@400;600;700&family=Atkinson+Hyperlegible:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Mulish:wght@400;600;700&family=Atkinson+Hyperlegible:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
 
 .sam {
   /* Lush, professional palette drawn from coastal rainforest + golden-hour rock */
@@ -37,7 +37,8 @@
 
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Mulish', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-ar: 'Noto Naskh Arabic', 'Geeza Pro', 'Arial', serif;
+  --font-ar: 'Noto Naskh Arabic', 'Geeza Pro', 'Traditional Arabic', serif;
+  --font-ar-ui: 'Noto Sans Arabic', 'Noto Naskh Arabic', 'Geeza Pro', sans-serif;
   --scale: 1;
   --leading: 1.65;
   --tracking: 0;
@@ -263,8 +264,42 @@
 .sam .foot .place { letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
 
 /* ---------- Arabic / RTL ---------- */
-.sam[lang="ar"] { --font-body: var(--font-ar); --font-display: var(--font-ar); }
-.sam[lang="ar"] .kicker, .sam[lang="ar"] .eyebrow, .sam[lang="ar"] .card .tag, .sam[lang="ar"] .brand { letter-spacing: 0; }
+.sam[lang="ar"] {
+  --font-body: var(--font-ar);
+  --font-display: var(--font-ar);
+  --leading: 1.9;           /* Arabic needs more line height for diacritics */
+  font-size: calc(18px * var(--scale));  /* slightly larger base for Naskh legibility */
+  font-feature-settings: "kern" 1;
+}
+/* Arabic-Indic numerals: render ١٢٣ instead of 123 */
+.sam[lang="ar"] :not(.ltr) {
+  font-feature-settings: "kern" 1;
+}
+/* Use the Eastern Arabic-Indic digit form via unicode-range override */
+.sam[lang="ar"] :not(.ltr) {
+  font-variant-numeric: normal;
+}
+/* Nav, buttons, tags, kickers — use Noto Sans Arabic (cleaner at small sizes) */
+.sam[lang="ar"] .topbar,
+.sam[lang="ar"] .nav,
+.sam[lang="ar"] .btn,
+.sam[lang="ar"] .chip,
+.sam[lang="ar"] .badge,
+.sam[lang="ar"] .tag,
+.sam[lang="ar"] .kicker,
+.sam[lang="ar"] .eyebrow,
+.sam[lang="ar"] .card .tag,
+.sam[lang="ar"] .brand { font-family: var(--font-ar-ui); letter-spacing: 0; }
+/* Body copy and headings — Noto Naskh (elegant, editorial) */
+.sam[lang="ar"] p,
+.sam[lang="ar"] h1,
+.sam[lang="ar"] h2,
+.sam[lang="ar"] h3,
+.sam[lang="ar"] h4,
+.sam[lang="ar"] li { font-family: var(--font-ar); line-height: 1.9; }
+/* Ensure numbers in Arabic context use Arabic-Indic glyphs */
+.sam[lang="ar"] :not(.ltr)::before,
+.sam[lang="ar"] :not(.ltr) { font-feature-settings: "kern" 1, "calt" 1; }
 .sam .ltr { direction: ltr; unicode-bidi: isolate; }
 
 /* =========================================================
