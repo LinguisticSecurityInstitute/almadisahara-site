@@ -14,7 +14,7 @@
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="/"><img src="../assets/lsi-logo.png" alt="" width="34" height="34"><span>Sahara Al-Madi</span></a>
+    <a class="brand" href="/"><img src="../assets/lsi-logo.png" alt="" width="34" height="34"><span data-i18n="name">Sahara Al-Madi</span></a>
     <nav aria-label="Main"><ul class="nav" id="sam-nav">
       <li><a href="/" data-i18n="nav.home">Home</a></li><li><a href="../portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li><li><a href="../speaking.html" data-i18n="nav.speaking">Speaking</a></li><li><a href="../lsi.html" data-i18n="nav.lsi">LSI</a></li><li><a href="index.html" aria-current="page" data-i18n="nav.blog">Blog</a></li>
       <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
@@ -44,89 +44,92 @@
 </div>
 
 <main id="main">
-<section class="page-hero" style="background:var(--forest-800);color:var(--cream);padding:clamp(64px,10vw,120px) 0 clamp(48px,7vw,90px)">
+<section class="hero page-hero slim">
   <div class="wrap">
-    <p class="eyebrow" style="color:var(--gold-soft);font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px">Writing</p>
-    <h1 style="font-size:clamp(2.2rem,6vw,4rem);font-weight:400;margin-bottom:16px">Field notes & interviews</h1>
-    <p style="max-width:52ch;color:rgba(246,242,231,.88);font-size:1.1rem">On linguistic security, AI governance, and what technology owes the communities it learns from.</p>
-    <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:12px">
-      <a class="btn btn-gold" href="https://substack.com/@linguisticsecurityinstitute" target="_blank" rel="noopener">Read on Substack →</a>
-    </div>
+    <p class="eyebrow" data-i18n="blog.kicker">Writing</p>
+    <h1 data-i18n="media.blog.title">Field notes & interviews</h1>
+    <p class="lede" data-i18n="bl.lede">On linguistic security, AI governance, and what technology owes the communities it learns from.</p>
+    <div class="btns"><a class="btn btn-gold" href="https://substack.com/@linguisticsecurityinstitute" target="_blank" rel="noopener" data-i18n="bl.read">Read on Substack →</a></div>
   </div>
 </section>
 
 <section class="block"><div class="wrap">
-  <p class="kicker">On Substack</p>
-  <h2 class="sec-title">Subscribe for research updates</h2>
-  <p class="sec-intro">Long-form writing, interviews and community resources published on Substack. Subscribe there to get new posts by email.</p>
-  <a class="btn btn-line" href="https://substack.com/@linguisticsecurityinstitute" target="_blank" rel="noopener" style="display:inline-flex">Go to Substack →</a>
-</div></section>
+  <div class="grid g2 blog-intro">
+    <div>
+      <p class="kicker" data-i18n="bl.sub.k">On Substack</p>
+      <h2 class="sec-title" data-i18n="bl.sub.t">Subscribe for research updates</h2>
+      <p class="sec-intro" data-i18n="bl.sub.d">Long-form writing, interviews and community resources published on Substack. Subscribe there to get new posts by email.</p>
+      <a class="btn btn-line" href="https://substack.com/@linguisticsecurityinstitute" target="_blank" rel="noopener" data-i18n="bl.sub.b">Go to Substack →</a>
+    </div>
+    <div>
+      <p class="kicker" data-i18n="bl.posts.k">Posts on this site</p>
+      <h2 class="sec-title" data-i18n="bl.posts.t">Articles & resources</h2>
+      <p class="sec-intro" data-i18n="bl.posts.d">Posts published directly here — articles, resources and interview transcripts for the LSI community.</p>
 
-<section class="block alt"><div class="wrap">
-  <p class="kicker">Posts on this site</p>
-  <h2 class="sec-title">Articles & resources</h2>
-  <p class="sec-intro" style="margin-bottom:32px">Posts published directly here — articles, resources and interview transcripts for the LSI community.</p>
-
-  <!-- ============================================================
-       HOW TO ADD A BLOG POST:
-       1. Create a new file in this blog/ folder, e.g. my-post.html
-          (copy the template at the bottom of this file as a starting point)
-       2. Add a new <article> block below, following the pattern shown
-       3. Commit both files to GitHub — the post goes live automatically
-       ============================================================ -->
-
-  <div style="display:grid;gap:24px;max-width:760px">
-
-    <!-- EXAMPLE — remove this block when you have real posts -->
-    <article class="card" style="opacity:.55;pointer-events:none;user-select:none">
-      <div class="tag">Coming soon</div>
-      <h3>Your first post goes here</h3>
-      <p>Add a new .html file to the blog/ folder and a card here linking to it. See the comment in the source for instructions.</p>
-      <span class="more" style="color:var(--text-soft)">Read more →</span>
-    </article>
-
+      <!-- ============================================================
+           HOW TO ADD A BLOG POST:
+           1. Create a new file in this blog/ folder, e.g. my-post.html
+              (copy the template at the bottom of this file as a starting point)
+           2. Add an <article class="card post"> block inside .posts below
+              and delete the "coming soon" card
+           3. Commit both files to GitHub; the post goes live automatically
+           ============================================================ -->
+      <div class="posts">
+        <article class="card post soon">
+          <div class="tag" data-i18n="bl.soon.tag">Coming soon</div>
+          <h3 data-i18n="bl.soon.t">First posts are on the way</h3>
+          <p data-i18n="bl.soon.d">Articles and interview transcripts will appear here. Until then, the latest writing is on Substack.</p>
+        </article>
+      </div>
+    </div>
   </div>
 </div></section>
 
-<section class="block"><div class="wrap">
-  <p class="kicker">Media</p>
-  <h2 class="sec-title">More from LSI</h2>
+<section class="block alt"><div class="wrap">
+  <p class="kicker" data-i18n="bl.media.k">Media</p>
+  <h2 class="sec-title" data-i18n="bl.media.t">More from LSI</h2>
   <div class="grid g3">
     <a class="card" href="https://www.youtube.com/@TheCyberLingo" target="_blank" rel="noopener">
-      <div class="tag">YouTube</div>
+      <span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></span>
+      <div class="tag" data-i18n="media.yt.tag">YouTube · video series</div>
       <h3>The Cyber Lingo</h3>
-      <p>Interviews, demos and workshops — AI security made visible for the whole community.</p>
-      <span class="more">Watch →</span>
+      <p data-i18n="media.yt.desc">Interviews, live workshops, red-team demos and visual explainers — making AI security and linguistic rights legible for everyone, not just practitioners.</p>
+      <span class="more" data-i18n="media.yt.cta">Watch on YouTube →</span>
     </a>
     <a class="card" href="https://huggingface.co/madisahara" target="_blank" rel="noopener">
-      <div class="tag">Hugging Face</div>
-      <h3>Open models & datasets</h3>
-      <p>Multilingual NLP benchmarks and evaluation tools — free to use and build on.</p>
-      <span class="more">Explore →</span>
+      <span class="glyph deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></span>
+      <div class="tag" data-i18n="media.hf.tag">Hugging Face · open models & datasets</div>
+      <h3 data-i18n="media.hf.title">Open models & datasets</h3>
+      <p data-i18n="media.hf.desc">LSI's open-source models, datasets and evaluation benchmarks for multilingual NLP — research on Arabic, Spanish and marginalized languages, free to use and build on.</p>
+      <span class="more" data-i18n="media.hf.cta">Explore on Hugging Face →</span>
     </a>
     <a class="card" href="../lsi.html">
-      <div class="tag">Research</div>
-      <h3>Linguistic Security Institute</h3>
-      <p>The frameworks, tools and open-source projects behind the work.</p>
-      <span class="more">Explore LSI →</span>
+      <span class="glyph deco" aria-hidden="true"><img src="../assets/lsi-logo.png" alt="" width="24" height="24"></span>
+      <div class="tag" data-i18n="res.k">Research</div>
+      <h3 data-i18n="lsi.full">Linguistic Security Institute</h3>
+      <p data-i18n="bl.r.d">The frameworks, tools and open-source projects behind the work.</p>
+      <span class="more" data-i18n="home.cta3">Explore LSI</span>
     </a>
   </div>
 </div></section>
 </main>
 
-<footer class="foot"><div class="wrap">
-  <div>© <span data-year>2026</span> Sahara Al-Madi · <span data-i18n="foot.rights">Linguistic Security Institute · All rights reserved.</span></div>
-  <div>
-    <a href="mailto:linguisticsecurityinstitute@gmail.com">linguisticsecurityinstitute@gmail.com</a>
-    <a href="https://www.linkedin.com/in/madisahara" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/bintdamiana" rel="noopener">GitHub</a>
-    <a href="https://www.youtube.com/@TheCyberLingo" rel="noopener" target="_blank">YouTube</a>
-    <a href="https://huggingface.co/madisahara" rel="noopener" target="_blank">Hugging Face</a>
-    <a href="../speaking.html">Speaking</a>
-    <a href="../lsi.html">LSI</a>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="/"><img src="../assets/lsi-logo.png" alt="" width="34" height="34"><span data-i18n="name">Sahara Al-Madi</span></a>
+      <p data-i18n="foot.tag">Computational linguist · Founder, Linguistic Security Institute</p>
+      <a class="foot-mail" href="mailto:linguisticsecurityinstitute@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg><span class="ltr">linguisticsecurityinstitute@gmail.com</span></a>
+    </div>
+    <nav class="foot-col" aria-label="Footer"><h2 data-i18n="foot.explore">Explore</h2><ul><li><a href="/" data-i18n="nav.home">Home</a></li><li><a href="../portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li><li><a href="../speaking.html" data-i18n="nav.speaking">Speaking</a></li><li><a href="../lsi.html" data-i18n="nav.lsi">LSI</a></li><li><a href="index.html" data-i18n="nav.blog">Blog</a></li><li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li></ul></nav>
+    <div class="foot-col"><h2 data-i18n="foot.connect">Connect</h2><ul class="foot-social"><li><a href="https://www.linkedin.com/in/madisahara" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg><span>LinkedIn</span></a></li><li><a href="https://github.com/bintdamiana" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 00-3.8 23.38c.6.12.83-.26.83-.57l-.02-2.04c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.5 1 .1-.78.42-1.31.76-1.6-2.67-.31-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 011.23 3.22c0 4.61-2.8 5.62-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0012 .3"/></svg><span>GitHub</span></a></li><li><a href="https://www.youtube.com/@TheCyberLingo" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg><span>YouTube</span></a></li><li><a href="https://huggingface.co/madisahara" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg><span>Hugging Face</span></a></li><li><a href="https://substack.com/@linguisticsecurityinstitute" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 8.24H1.46V5.41h21.08v2.83zM1.46 10.81V24L12 18.11 22.54 24V10.81H1.46zM22.54 0H1.46v2.84h21.08V0z"/></svg><span>Substack</span></a></li></ul></div>
   </div>
-  <div class="place">Language · Technology · Education</div>
-</div></footer>
+  <div class="wrap foot-bottom">
+    <p>© <span data-year>2026</span> <span data-i18n="name">Sahara Al-Madi</span> · <span data-i18n="foot.rights">Linguistic Security Institute · All rights reserved.</span></p>
+    <p class="place" data-i18n="foot.place">Language · Technology · Education</p>
+    <a class="to-top" href="#main" data-i18n="foot.top">Back to top ↑</a>
+  </div>
+</footer>
 </div>
 <script src="../assets/site.js"></script>
 </body>
