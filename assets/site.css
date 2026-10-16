@@ -213,8 +213,15 @@
 .sam .chip { font-size: .75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: var(--mist); color: var(--moss); border: 1px solid var(--border); }
 
 /* contact strip */
-.sam .contact-strip { margin-top: 32px; padding: 22px 26px; border-radius: 18px; background: linear-gradient(120deg, var(--forest-800), var(--ocean-700)); color: var(--cream); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+.sam .contact-strip { margin-top: 32px; padding: 22px 26px; border-radius: 18px; background: linear-gradient(120deg, var(--forest-800), var(--ocean-700)); color: var(--cream); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.sam .contact-strip-left { display: flex; flex-direction: column; gap: 12px; }
+.sam .contact-strip-left > span { font-size: 1rem; font-weight: 600; opacity: .9; }
+.sam .contact-strip-btns { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.sam .contact-email-link { font-size: .9rem; color: var(--gold-soft); font-weight: 600; }
+.sam .contact-strip-social { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.sam .contact-sep { color: rgba(246,242,231,.45); }
 .sam .contact-strip a { color: var(--gold-soft); font-weight: 700; }
+.sam .contact-strip .btn-gold { margin-left: 0; }
 
 /* ---------- Engagements list ---------- */
 .sam .events { display: grid; gap: 14px; }
@@ -252,6 +259,15 @@
 /* ---------- Poster ---------- */
 .sam .poster { border-radius: 18px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 22px 50px rgba(13, 42, 33, .14); background: var(--surface); }
 .sam .poster figcaption { padding: 14px 18px; font-size: .9rem; color: var(--text-soft); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+/* ---------- Photo gallery ---------- */
+.sam .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 32px; }
+.sam .gallery-item { border-radius: 14px; overflow: hidden; background: var(--surface); border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(13, 42, 33, .10); display: flex; flex-direction: column; }
+.sam .gallery-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center top; display: block; transition: transform .35s ease; }
+.sam .gallery-item:hover img { transform: scale(1.03); }
+.sam .gallery-item figcaption { padding: 12px 16px; font-size: .82rem; color: var(--text-soft); line-height: 1.45; flex: 1; }
+@media (max-width: 640px) { .sam .gallery { grid-template-columns: 1fr; } }
+.sam.m-text .gallery-item img { display: none !important; }
 
 /* ---------- Blog teaser ---------- */
 .sam .blog-cta { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
